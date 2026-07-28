@@ -6,6 +6,7 @@
   <meta name="description" content="A focused portfolio and interactive experiments by yj894kim.">
   <title>yj894kim — Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="game-overrides.css">
   <script defer src="script.js"></script>
   <script defer src="game.js"></script>
 </head>
@@ -58,7 +59,7 @@
     <section id="games" class="game-section">
       <div class="section-shell game-intro"><p class="eyebrow">04 / Games</p><h2>Take a little<br><em>detour.</em></h2><p>Choose a pattern, then grow carefully. Eat smaller worms, avoid larger ones, and watch the field get busier.</p></div>
       <div class="game-wrap section-shell">
-        <div class="game-toolbar"><div><strong>Worm Field</strong><span id="game-status">Ready when you are.</span></div><div class="score-box"><span>Score</span><strong id="score">0</strong></div></div>
+        <div class="game-toolbar"><div><strong>Worm Field</strong><span id="game-status">Ready when you are.</span></div><div class="score-box"><span>Score</span><strong id="score">0</strong><span>Best</span><strong id="high-score">0</strong><button class="toolbar-button" id="pause-game" type="button" disabled>Pause</button></div></div>
         <div class="character-picker" aria-label="Choose a character">
           <button class="character-choice active" data-character="mint" type="button">Mint</button>
           <button class="character-choice" data-character="sun" type="button">Sun</button>

@@ -43,7 +43,7 @@
     state.particles = [];
   }
   function setDirection(direction) {
-    if (!state.player || !vectors[direction] || opposite[state.player.direction] === direction) return;
+    if (!state.player || vectors[direction] === undefined || opposite[state.player.direction] === direction) return;
     state.player.direction = direction;
   }
   function spawnParticles(x, y, color) { for (let i = 0; i < 16; i += 1) state.particles.push({ x, y, vx: random(-70, 70), vy: random(-70, 70), life: 1, color }); }

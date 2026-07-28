@@ -15,49 +15,18 @@
     <a class="brand" href="#home" aria-label="yj894kim home">yj894kim<span>.</span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a class="nav-game" href="#games">Games</a>
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-      <a class="nav-game" href="#games">Games</a>
     </nav>
   </header>
 
   <main>
-    <section id="home" class="hero section-shell">
-      <p class="eyebrow">A quiet space for ideas, work, and play</p>
-      <h1>Make room<br><em>for better work.</em></h1>
-      <p class="hero-copy">A simple, focused home for selected work, experiments, and the next thing worth building.</p>
-      <a class="button button-dark" href="#projects">Explore the work <span aria-hidden="true">↗</span></a>
-      <div class="hero-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
-    </section>
-
-    <section id="about" class="content-section section-shell split-section">
-      <div><p class="eyebrow">01 / About</p><h2>Clarity is<br><em>a feature.</em></h2></div>
-      <div class="section-copy"><p>This space is designed around a simple principle: useful things should feel clear. Explore a growing collection of work, experiments, and ideas.</p><p class="muted">Detailed personal and CV information is intentionally not published here.</p></div>
-    </section>
-
-    <section id="experience" class="content-section section-shell">
-      <div class="section-heading"><p class="eyebrow">02 / Experience</p><h2>Selected<br><em>chapters.</em></h2></div>
-      <div class="chapter-list">
-        <article><span>01</span><div><h3>Independent practice</h3><p>Building focused digital experiences and testing ideas in public.</p></div><span class="chapter-mark">↗</span></article>
-        <article><span>02</span><div><h3>Learning through making</h3><p>Turning questions into small, observable experiments.</p></div><span class="chapter-mark">↗</span></article>
-        <article><span>03</span><div><h3>Next chapter</h3><p>A place reserved for the work that comes next.</p></div><span class="chapter-mark">↗</span></article>
-      </div>
-    </section>
-
-    <section id="projects" class="content-section section-shell">
-      <div class="section-heading"><p class="eyebrow">03 / Projects</p><h2>Small ideas,<br><em>well made.</em></h2></div>
-      <div class="project-grid">
-        <article class="project-card project-card-dark"><p class="card-index">01</p><h3>Portfolio system</h3><p>A responsive foundation for work, notes, and experiments.</p><span>Web / Ongoing</span></article>
-        <article class="project-card project-card-lime"><p class="card-index">02</p><h3>Loop thinking</h3><p>Designing repeatable workflows with visible feedback.</p><span>Research / Practice</span></article>
-        <article class="project-card project-card-sand"><p class="card-index">03</p><h3>Playground</h3><p>Interactive sketches that make room for curiosity.</p><span>Experiments / 2026</span></article>
-      </div>
-    </section>
-
     <section id="games" class="game-section">
-      <div class="section-shell game-intro"><p class="eyebrow">04 / Games</p><h2>Take a little<br><em>detour.</em></h2><p>Choose a pattern, then grow carefully. Eat smaller worms, avoid larger ones, and watch the field get busier.</p></div>
+      <div class="section-shell game-intro"><p class="eyebrow">01 / Games</p><h2>Take a little<br><em>detour.</em></h2><p>Choose a pattern, then grow carefully. Eat smaller worms, avoid larger ones, and watch the field get busier.</p></div>
       <div class="game-wrap section-shell">
         <div class="game-toolbar"><div><strong>Worm Field</strong><span id="game-status">Ready when you are.</span></div><div class="score-box"><span>Score</span><strong id="score">0</strong><span>Best</span><strong id="high-score">0</strong><button class="toolbar-button" id="pause-game" type="button" disabled>Pause</button></div></div>
         <div class="character-picker" aria-label="Choose a character">
@@ -69,6 +38,37 @@
         </div>
         <div class="game-board-wrap"><canvas id="game-canvas" width="960" height="540" tabindex="0" aria-label="Worm game board"></canvas><div class="game-overlay" id="game-overlay"><h3 id="overlay-title">Ready to roam?</h3><p id="overlay-copy">Use the arrow keys, WASD, or the D-pad.</p><button class="button button-light" id="start-game" type="button">Start game</button></div></div>
         <div class="game-controls"><div class="dpad" aria-label="D-pad controls"><button type="button" data-direction="up" aria-label="Move up">↑</button><div><button type="button" data-direction="left" aria-label="Move left">←</button><button type="button" data-direction="down" aria-label="Move down">↓</button><button type="button" data-direction="right" aria-label="Move right">→</button></div></div><p>Eat the glowing dots. You can only eat a smaller worm. Touching a larger worm ends the game.</p></div>
+      </div>
+    </section>
+
+    <section id="home" class="hero section-shell">
+      <p class="eyebrow">A focused space for interactive work</p>
+      <h1>Build, play,<br><em>learn by doing.</em></h1>
+      <p class="hero-copy">A small portfolio shaped around Worm Field — a responsive game experiment built with HTML, CSS, and JavaScript.</p>
+      <a class="button button-dark" href="#games">Play Worm Field <span aria-hidden="true">↗</span></a>
+      <div class="hero-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+    </section>
+
+    <section id="about" class="content-section section-shell split-section">
+      <div><p class="eyebrow">01 / About</p><h2>Play is<br><em>a way to learn.</em></h2></div>
+      <div class="section-copy"><p>Worm Field turns simple rules into a hands-on study of interaction: movement, timing, collision, growth, and feedback.</p><p class="muted">The project is intentionally built with plain HTML, CSS, and JavaScript so each behavior stays visible and easy to explore.</p></div>
+    </section>
+
+    <section id="experience" class="content-section section-shell">
+      <div class="section-heading"><p class="eyebrow">02 / Experience</p><h2>Designed<br><em>through loops.</em></h2></div>
+      <div class="chapter-list">
+        <article><span>01</span><div><h3>Design the rules</h3><p>Define movement, food, growth, score, and collision as observable game states.</p></div><span class="chapter-mark">↗</span></article>
+        <article><span>02</span><div><h3>Make feedback visible</h3><p>Use score, particles, status text, and responsive controls to show what the system is doing.</p></div><span class="chapter-mark">↗</span></article>
+        <article><span>03</span><div><h3>Iterate from play</h3><p>Use real interaction to find friction, then improve the smallest part that matters.</p></div><span class="chapter-mark">↗</span></article>
+      </div>
+    </section>
+
+    <section id="projects" class="content-section section-shell">
+      <div class="section-heading"><p class="eyebrow">03 / Projects</p><h2>One game,<br><em>many systems.</em></h2></div>
+      <div class="project-grid">
+        <article class="project-card project-card-dark"><p class="card-index">01</p><h3>Worm Field</h3><p>Grow by eating smaller worms while avoiding larger ones.</p><span>Game / JavaScript</span></article>
+        <article class="project-card project-card-lime"><p class="card-index">02</p><h3>Responsive play</h3><p>Keyboard, WASD, touch, and D-pad controls across screen sizes.</p><span>Interaction / UI</span></article>
+        <article class="project-card project-card-sand"><p class="card-index">03</p><h3>Living field</h3><p>Ten enemies, timed growth, score feedback, and collision effects.</p><span>Systems / Experiment</span></article>
       </div>
     </section>
 

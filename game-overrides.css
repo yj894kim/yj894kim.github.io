@@ -3,3 +3,15 @@
 .toolbar-button{margin-left:10px;padding:8px 12px;border-radius:999px;background:#2b2d28;color:var(--paper);font-size:.72rem}
 .toolbar-button:not(:disabled):hover{background:var(--lime);color:var(--ink)}
 .game-overlay[hidden]{display:none}
+.game-art{margin:4px 0 22px;border:1px solid #363832;border-radius:var(--radius);background:#191a18;overflow:hidden}
+.game-art svg{display:block;width:100%;height:auto;min-height:120px}
+.art-grid{fill:none;stroke:#292b26;stroke-width:1}
+.art-worm{fill:none;stroke-width:22;stroke-linecap:round;stroke-linejoin:round}
+.art-worm-mint{stroke:#d8f36a}
+.art-worm-sun{stroke:#ffc857}
+.art-worm-berry{stroke:#ef7a9c}
+.art-food{fill:#77c7e8}
+.art-food-b{fill:#d8f36a}
+.art-food-c{fill:#ffc857}
+.art-eye{fill:#101010}
+@media (max-width:760px){.game-art{margin-bottom:18px}.game-art svg{min-height:90px}}

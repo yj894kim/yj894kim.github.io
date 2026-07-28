@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A focused portfolio and interactive experiments by yj894kim.">
+  <title>yj894kim — Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <script defer src="game.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="yj894kim home">yj894kim<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-game" href="#games">Games</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section-shell">
+      <p class="eyebrow">A quiet space for ideas, work, and play</p>
+      <h1>Make room<br><em>for better work.</em></h1>
+      <p class="hero-copy">A simple, focused home for selected work, experiments, and the next thing worth building.</p>
+      <a class="button button-dark" href="#projects">Explore the work <span aria-hidden="true">↗</span></a>
+      <div class="hero-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+    </section>
+
+    <section id="about" class="content-section section-shell split-section">
+      <div><p class="eyebrow">01 / About</p><h2>Clarity is<br><em>a feature.</em></h2></div>
+      <div class="section-copy"><p>This space is designed around a simple principle: useful things should feel clear. Explore a growing collection of work, experiments, and ideas.</p><p class="muted">Detailed personal and CV information is intentionally not published here.</p></div>
+    </section>
+
+    <section id="experience" class="content-section section-shell">
+      <div class="section-heading"><p class="eyebrow">02 / Experience</p><h2>Selected<br><em>chapters.</em></h2></div>
+      <div class="chapter-list">
+        <article><span>01</span><div><h3>Independent practice</h3><p>Building focused digital experiences and testing ideas in public.</p></div><span class="chapter-mark">↗</span></article>
+        <article><span>02</span><div><h3>Learning through making</h3><p>Turning questions into small, observable experiments.</p></div><span class="chapter-mark">↗</span></article>
+        <article><span>03</span><div><h3>Next chapter</h3><p>A place reserved for the work that comes next.</p></div><span class="chapter-mark">↗</span></article>
+      </div>
+    </section>
+
+    <section id="projects" class="content-section section-shell">
+      <div class="section-heading"><p class="eyebrow">03 / Projects</p><h2>Small ideas,<br><em>well made.</em></h2></div>
+      <div class="project-grid">
+        <article class="project-card project-card-dark"><p class="card-index">01</p><h3>Portfolio system</h3><p>A responsive foundation for work, notes, and experiments.</p><span>Web / Ongoing</span></article>
+        <article class="project-card project-card-lime"><p class="card-index">02</p><h3>Loop thinking</h3><p>Designing repeatable workflows with visible feedback.</p><span>Research / Practice</span></article>
+        <article class="project-card project-card-sand"><p class="card-index">03</p><h3>Playground</h3><p>Interactive sketches that make room for curiosity.</p><span>Experiments / 2026</span></article>
+      </div>
+    </section>
+
+    <section id="games" class="game-section">
+      <div class="section-shell game-intro"><p class="eyebrow">04 / Games</p><h2>Take a little<br><em>detour.</em></h2><p>Choose a pattern, then grow carefully. Eat smaller worms, avoid larger ones, and watch the field get busier.</p></div>
+      <div class="game-wrap section-shell">
+        <div class="game-toolbar"><div><strong>Worm Field</strong><span id="game-status">Ready when you are.</span></div><div class="score-box"><span>Score</span><strong id="score">0</strong></div></div>
+        <div class="character-picker" aria-label="Choose a character">
+          <button class="character-choice active" data-character="mint" type="button">Mint</button>
+          <button class="character-choice" data-character="sun" type="button">Sun</button>
+          <button class="character-choice" data-character="berry" type="button">Berry</button>
+          <button class="character-choice" data-character="ocean" type="button">Ocean</button>
+          <button class="character-choice" data-character="mono" type="button">Mono</button>
+        </div>
+        <div class="game-board-wrap"><canvas id="game-canvas" width="960" height="540" aria-label="Worm game board"></canvas><div class="game-overlay" id="game-overlay"><h3 id="overlay-title">Ready to roam?</h3><p id="overlay-copy">Use the arrow keys, WASD, or the D-pad.</p><button class="button button-light" id="start-game" type="button">Start game</button></div></div>
+        <div class="game-controls"><div class="dpad" aria-label="D-pad controls"><button type="button" data-direction="up" aria-label="Move up">↑</button><div><button type="button" data-direction="left" aria-label="Move left">←</button><button type="button" data-direction="down" aria-label="Move down">↓</button><button type="button" data-direction="right" aria-label="Move right">→</button></div></div><p>Eat the glowing dots. You can only eat a smaller worm. Touching a larger worm ends the game.</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section section-shell"><p class="eyebrow">05 / Contact</p><h2>Keep in touch<br><em>with the work.</em></h2><p>For collaborations, ideas, or a thoughtful hello, reach out through the public profile channels connected to this site.</p><a class="button button-dark" href="#home">Back to top <span aria-hidden="true">↑</span></a></section>
+  </main>
+
+  <footer class="site-footer section-shell"><span>© 2026 yj894kim</span><span>Built with HTML, CSS &amp; JavaScript</span></footer>
+</body>
+</html>

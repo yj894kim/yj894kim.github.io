@@ -47,14 +47,15 @@
     state.player.direction = direction;
   }
   function spawnParticles(x, y, color) { for (let i = 0; i < 16; i += 1) state.particles.push({ x, y, vx: random(-70, 70), vy: random(-70, 70), life: 1, color }); }
-  function setOverlay(title, copy, buttonText) { overlayTitle.textContent = title; overlayCopy.textContent = copy; startButton.textContent = buttonText; overlay.hidden = false; }
-  function startGame() { reset(); state.running = true; state.paused = false; state.lastTime = 0; overlay.hidden = true; pauseButton.disabled = false; pauseButton.textContent = 'Pause'; status.textContent = 'Stay sharp — the field is growing.'; }
+  function setOverlay(title, copy, buttonText) { overlayTitle.textContent = title; overlayCopy.textContent = copy; startButton.textContent = buttonText; overlay.hidden = false; overlay.style.display = ''; }
+  function hideOverlay() { overlay.hidden = true; overlay.style.display = 'none'; }
+  function startGame() { reset(); state.running = true; state.paused = false; state.lastTime = 0; hideOverlay(); pauseButton.disabled = false; pauseButton.textContent = 'Pause'; status.textContent = 'Stay sharp — the field is growing.'; }
   function togglePause() {
     if (!state.running) return;
     state.paused = !state.paused;
     pauseButton.textContent = state.paused ? 'Resume' : 'Pause';
     if (state.paused) { setOverlay('A quiet moment.', 'Your score is safe. Resume when you are ready.', 'Resume'); status.textContent = 'Paused — the field is waiting.'; }
-    else { overlay.hidden = true; status.textContent = 'Back in motion.'; }
+    else { hideOverlay(); status.textContent = 'Back in motion.'; }
   }
   function endGame(message) {
     state.running = false;

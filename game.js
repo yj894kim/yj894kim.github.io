@@ -49,7 +49,7 @@
   function spawnParticles(x, y, color) { for (let i = 0; i < 16; i += 1) state.particles.push({ x, y, vx: random(-70, 70), vy: random(-70, 70), life: 1, color }); }
   function setOverlay(title, copy, buttonText) { overlayTitle.textContent = title; overlayCopy.textContent = copy; startButton.textContent = buttonText; overlay.hidden = false; overlay.style.display = ''; }
   function hideOverlay() { overlay.hidden = true; overlay.style.display = 'none'; }
-  function startGame() { reset(); state.running = true; state.paused = false; state.lastTime = 0; hideOverlay(); pauseButton.disabled = false; pauseButton.textContent = 'Pause'; status.textContent = 'Stay sharp — the field is growing.'; }
+  function startGame() { reset(); state.running = true; state.paused = false; state.lastTime = 0; hideOverlay(); pauseButton.disabled = false; pauseButton.textContent = 'Pause'; status.textContent = 'Stay sharp — the field is growing.'; canvas.focus({ preventScroll: true }); }
   function togglePause() {
     if (!state.running) return;
     state.paused = !state.paused;
@@ -84,7 +84,7 @@
   pauseButton.addEventListener('click', togglePause);
   document.querySelectorAll('[data-direction]').forEach((button) => button.addEventListener('pointerdown', () => setDirection(button.dataset.direction)));
   document.querySelectorAll('[data-character]').forEach((button) => button.addEventListener('click', () => { state.character = button.dataset.character; document.querySelectorAll('.character-choice').forEach((choice) => choice.classList.toggle('active', choice === button)); if (!state.running) { reset(); draw(); } }));
-  window.addEventListener('keydown', (event) => { const map = { ArrowUp: 'up', w: 'up', ArrowDown: 'down', s: 'down', ArrowLeft: 'left', a: 'left', ArrowRight: 'right', d: 'right', W: 'up', A: 'left', S: 'down', D: 'right' }; if (event.key === ' ' && state.running) { event.preventDefault(); togglePause(); return; } if (map[event.key]) { event.preventDefault(); setDirection(map[event.key]); } });
+  document.addEventListener('keydown', (event) => { const map = { ArrowUp: 'up', KeyW: 'up', ArrowDown: 'down', KeyS: 'down', ArrowLeft: 'left', KeyA: 'left', ArrowRight: 'right', KeyD: 'right' }; const direction = map[event.code] || map[event.key]; if ((event.code === 'Space' || event.key === ' ') && state.running) { event.preventDefault(); togglePause(); return; } if (direction) { event.preventDefault(); setDirection(direction); } });
   state.highScore = readHighScore();
   highScoreEl.textContent = String(state.highScore);
   reset(); draw();
